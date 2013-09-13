@@ -1,15 +1,12 @@
 package ch.x3m.service;
 
-import java.util.ArrayList;
 import java.util.List;
 import javax.ejb.EJB;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.jws.WebService;
-import ch.x3m.dto.PersonDTO;
-import ch.x3m.eao.Eao;
-import ch.x3m.entity.Person;
-import ch.x3m.util.Conversion;
+import ch.x3m.entity.Order;
+import ch.x3m.entity.service.OrderService;
 
 /**
  * Session Bean implementation class TestBean
@@ -20,10 +17,7 @@ import ch.x3m.util.Conversion;
 public class TestBean implements TestBeanInterface {
 
 	@EJB
-	Eao eao;
-
-	@EJB
-	Conversion conv;
+	OrderService srvc;
 
 	/**
 	 * Default constructor.
@@ -33,20 +27,16 @@ public class TestBean implements TestBeanInterface {
 	}
 
 	@Override
-	public long orderCount() {
-		return eao.countOrders();
-	}
-
-	@Override
-	public List<PersonDTO> allPersons() {
-
-		List<PersonDTO> result = new ArrayList<PersonDTO>();
-		List<Person> allPersons = eao.allPersons();
-		for (Person p : allPersons) {
-			PersonDTO pi = conv.fromEntity(p);
-			result.add(pi);
+	public Long countOrders() {
+		List<Order> orders = srvc.findByTitle("def");
+		for (Order o : orders) {
+			System.out.println("Order: " + o.getTitle());
 		}
-		return result;
+
+		for (Order o : srvc.getAllOrders()) {
+			System.out.println("All Order:" + o.getOrdernr() + " - " + o.getTitle());
+		}
+		return srvc.countOrders();
 	}
 
 }
