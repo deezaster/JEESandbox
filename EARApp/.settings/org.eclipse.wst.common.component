@@ -11,5 +11,9 @@
         <dependent-module archiveName="JEEUtility.jar" deploy-path="/lib" handle="module:/resource/JEEUtility/JEEUtility">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="Servlets.war" deploy-path="/" handle="module:/resource/Servlets/Servlets">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
     </wb-module>
 </project-modules>

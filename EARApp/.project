@@ -6,6 +6,7 @@
 		<project>EJBProject</project>
 		<project>EJBProjectClient</project>
 		<project>JEEUtility</project>
+		<project>Servlets</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

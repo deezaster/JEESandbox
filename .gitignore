@@ -12,7 +12,6 @@ tmp/**/*
 *.swp
 local.properties
 .classpath
-.settings/
 .loadpath
 .externalToolBuilders/
 *.launch
