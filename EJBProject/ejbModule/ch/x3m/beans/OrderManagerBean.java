@@ -43,7 +43,7 @@ public class OrderManagerBean implements OrderManager {
 
 		List<String> orders = new ArrayList<>();
 		for (Order o : srvc.getAllOrders()) {
-			System.out.println("All Order:" + o.getOrdernr() + " - " + o.getTitle());
+			System.out.println("All Orders:" + o.getOrdernr() + " - " + o.getTitle());
 			orders.add("Nr: " + o.getOrdernr() + " / Title: " + o.getTitle());
 		}
 		return orders;
