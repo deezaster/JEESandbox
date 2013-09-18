@@ -11,7 +11,7 @@
         <dependent-module archiveName="JEEUtility.jar" deploy-path="/lib" handle="module:/resource/JEEUtility/JEEUtility">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="Servlets.war" deploy-path="/" handle="module:/resource/Servlets/Servlets">
+        <dependent-module archiveName="Vaadin7.war" deploy-path="/" handle="module:/resource/Vaadin7/Vaadin7">
             <dependent-object/>
             <dependency-type>uses</dependency-type>
         </dependent-module>

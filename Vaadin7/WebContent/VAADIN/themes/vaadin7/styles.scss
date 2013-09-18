@@ -1,0 +1,9 @@
+@import "addons.scss";
+@import "vaadin7.scss";
+
+/* This file prefixes all rules with the theme name to avoid causing conflicts with other themes. */
+/* The actual styles should be defined in vaadin7.scss */
+.vaadin7 {
+  @include addons;
+  @include vaadin7;
+}
