@@ -5,19 +5,24 @@ import java.util.List;
 import javax.naming.InitialContext;
 import org.junit.Before;
 import org.junit.Test;
-import ch.x3m.junit.Util;
+import ch.x3m.beans.OrderManager;
 
 public class TestBean01 {
 
-	private Bean01Interface serviceBean;
+	private OrderManager serviceBean;
 
 	@Before
 	public void setUp() throws Exception {
 
+		//		serviceBean =
+		//				(OrderManager) new InitialContext(Util.getInitProperties())
+		//						.lookup("java:global/EARApp/EJBProject/OrderManagerBean"
+		//								+ "!ch.x3m.beans.OrderManager");
+
 		serviceBean =
-				(Bean01Interface) new InitialContext(Util.getInitProperties())
-						.lookup("java:global/EARApp/EJBProject/Bean01"
-								+ "!ch.x3m.service.Bean01Interface");
+				(OrderManager) new InitialContext()
+						.lookup("java:global/EARApp/EJBProject/OrderManagerBean"
+								+ "!ch.x3m.beans.OrderManager");
 
 	}
 

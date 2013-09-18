@@ -1,4 +1,4 @@
-package ch.x3m.service;
+package ch.x3m.beans;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +15,12 @@ import ch.x3m.entity.service.OrderService;
 @Stateless
 @LocalBean
 @WebService
-public class Bean01 implements Bean01Interface {
+public class OrderManagerBean implements OrderManager {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
 	@EJB
 	OrderService srvc;
@@ -23,7 +28,7 @@ public class Bean01 implements Bean01Interface {
 	/**
 	 * Default constructor.
 	 */
-	public Bean01() {
+	public OrderManagerBean() {
 
 	}
 

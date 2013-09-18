@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import ch.x3m.beans.OrderManagerBean;
 
 /**
  * Servlet implementation class OrderList
@@ -19,14 +20,13 @@ public class OrderList extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	@EJB
-	Bean01 bean;
+	OrderManagerBean bean;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
 	public OrderList() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	/**
