@@ -36,6 +36,9 @@ Tips & Tricks
 
 Bean testen
 -----------
+
+###Als Webservice
+
 Der schnellste und einfachste Weg ein Bean zu testen, ist dieses Bean als Webservice - mit der Annotation **@WebService** - zu deklarieren:
 
 **Beispiel:** EJBProject\OrderManagerBean.java
@@ -51,7 +54,6 @@ public class OrderManagerBean implements OrderManager {
 	@EJB
 	OrderService srvc;
 
-
 	public OrderManagerBean() {
 	}
 
@@ -65,7 +67,29 @@ public class OrderManagerBean implements OrderManager {
 
 Der eigentliche Test erfolgt dann entweder mit dem **Webservice-Tester von Glassfish 4** ([Anleitung](http://programming.manessinger.com/tutorials/an-eclipse-glassfish-java-ee-6-tutorial/#heading_toc_j_22)) oder mit dem Tool **"soapUI"** ([Anleitung](http://programming.manessinger.com/tutorials/an-eclipse-glassfish-java-ee-6-tutorial/#heading_toc_j_23)).
 
+###Als JUnit Test
+Dazu wird ein gewöhnliches Java-Projekt erstellt. Folgende Buildpath-Einstellungen sind nötig:
+- bei **Projekt** muss eine Referenz auf das EJB-Projekt **"EJBProject"** erstellt werden
+- bei **Libraries** muss nebst dem **JRE** auch noch die **JUnit4-Library** sowie das externe JAR: **gf-client-module.jar** (im Unterverzeichnis \modules der Glassfish-Installation) eingetragen werden
 
+```java
+public class TestBean01 {
 
+	private OrderManager serviceBean;
+
+	@Before
+	public void setUp() throws Exception {
+
+		serviceBean =
+				(OrderManager) new InitialContext().lookup("java:global/EARApp/EJBProject/OrderManagerBean!ch.x3m.beans.OrderManager");
+	}
+
+	@Test
+	public void countOrders() {
+		long cnt = serviceBean.countOrders().longValue();
+		assertEquals("count Orders", 2, cnt);
+	}
+}
+```
 
 
