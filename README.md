@@ -6,7 +6,7 @@ Projektbeschreibung
 Es handelt sich hierbei um ein **Java EE Testprojekt** für 
 
 - **Glassfish 4** 
-- mit **Vaadin7** als GUI-Komponente, 
+- **Vaadin7** als Webframework, 
 - **Eclipselink** als JPA Persistenzprovider, 
 - **MySQL** als Datenbank 
 - und mit **JUnit** Tests. 
@@ -34,8 +34,7 @@ Empfehlen kann ich folgende Bücher:
 - **EJB 3 Developer Guide** (ISBN 978-1-847195-60-9)
 - **Mastering EnterpriseJavaBeans™ 3.0** (ISBN 978-0-471-78541-5)
 - **Pro JPA 2: Mastering the Java™Persistence API** (ISBN 978-1-4302-1956-9)
-- **Book of Vaadin**
-
+- **Book of Vaadin** (https://vaadin.com/book)
 
 
 
@@ -73,7 +72,10 @@ public class OrderManagerBean implements OrderManager {
 }
 ```
 
-Der eigentliche Test erfolgt dann entweder mit dem **Webservice-Tester von Glassfish 4** ([Anleitung](http://programming.manessinger.com/tutorials/an-eclipse-glassfish-java-ee-6-tutorial/#heading_toc_j_22)) oder mit dem Tool **"soapUI"** ([Anleitung](http://programming.manessinger.com/tutorials/an-eclipse-glassfish-java-ee-6-tutorial/#heading_toc_j_23)).
+Der eigentliche Test erfolgt dann entweder mit dem **Webservice Tester von Glassfish 4** ([Anleitung](http://programming.manessinger.com/tutorials/an-eclipse-glassfish-java-ee-6-tutorial/#heading_toc_j_22)) oder mit dem Tool **"soapUI"** ([Anleitung](http://programming.manessinger.com/tutorials/an-eclipse-glassfish-java-ee-6-tutorial/#heading_toc_j_23)).
+
+![Glassfish Webservice Tester](https://github.com/deezaster/JEESandbox/tree/master/docs/gf_webservice_tester.png)
+
 
 ###Als JUnit Test
 Dazu wird ein gewöhnliches Java-Projekt erstellt. Folgende Buildpath-Einstellungen sind nötig:
