@@ -72,9 +72,13 @@ public class OrderManagerBean implements OrderManager {
 }
 ```
 
-Der eigentliche Test erfolgt dann entweder mit dem **Webservice Tester von Glassfish 4** ([Anleitung](http://programming.manessinger.com/tutorials/an-eclipse-glassfish-java-ee-6-tutorial/#heading_toc_j_22)) oder mit dem Tool **"soapUI"** ([Anleitung](http://programming.manessinger.com/tutorials/an-eclipse-glassfish-java-ee-6-tutorial/#heading_toc_j_23)).
+Der eigentliche Test erfolgt dann entweder mit dem **Webservice Tester von Glassfish 4** ([Anleitung](http://programming.manessinger.com/tutorials/an-eclipse-glassfish-java-ee-6-tutorial/#heading_toc_j_22)): 
 
-![Glassfish Webservice Tester](https://github.com/deezaster/JEESandbox/tree/master/docs/gf_webservice_tester.png)
+![Glassfish Webservice Tester](https://github.com/deezaster/JEESandbox/blob/master/docs/images/gf_webservice_tester.png?raw=true)
+
+oder mit dem Tool **"soapUI"**:
+
+![Glassfish Webservice Tester](https://github.com/deezaster/JEESandbox/blob/master/docs/images/soapui_webservice_tester.png?raw=true)
 
 
 ###Als JUnit Test
