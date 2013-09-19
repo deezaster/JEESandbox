@@ -22,7 +22,7 @@ Dieses Projekt entstand während meinem Selbststudium und wird auch weiterhin da
 Literatur
 ---------
 Der Code ist eine Zusammenfassung aus diversen Tutorials. Folgende Links haben mir sehr geholfen:
-
+ 
 - **Oracle Java EE 7 Documentation**: http://docs.oracle.com/javaee/
 - **An Eclipse / GlassFish / Java EE 6 Tutorial**: http://programming.manessinger.com/tutorials/an-eclipse-glassfish-java-ee-6-tutorial/
 - **Effective pattern for data access with JPA**: http://workingonbits.com/2011/05/05/effective-pattern-for-data-access-with-jpa/

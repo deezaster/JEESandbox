@@ -93,6 +93,12 @@ public class Vaadin7UI extends UI {
 		menuBar_1.setHeight("-1px");
 		verticalLayout_1.addComponent(menuBar_1);
 
+		// Put some items in the menu hierarchically
+		MenuBar.MenuItem mnu1 = menuBar_1.addItem("Menu 1", null, null);
+		MenuBar.MenuItem mnu1s1 = mnu1.addItem("Submenu 1-1", null, null);
+		MenuBar.MenuItem mnu1s2 = mnu1.addItem("Submenu 1-2", null, null);
+		MenuBar.MenuItem mnu2 = menuBar_1.addItem("Menu 2", null, null);
+
 		HorizontalSplitPanel splitPanel = new HorizontalSplitPanel();
 		splitPanel.setImmediate(false);
 		splitPanel.setWidth("100.0%");
